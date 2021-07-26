@@ -1,10 +1,12 @@
 # Add  code here!
+require 'prime'
+
 def prime?(int)
-    x = 2
-    while x < int
-      return false if int % x == 0
-      x += 1
+    if int <= 1
+        false
+    elsif int == 2
+        true
+    else 
+        (2..int/2).none? { |i| int % i == 0}
     end
-    true
-  end
 end
